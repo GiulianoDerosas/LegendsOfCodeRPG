@@ -47,4 +47,18 @@ public class GameLogic {
         scanner.next();
     }
 
+//    Method that will start the game
+    public static void startGame(){
+        boolean nameSet;
+        String name;
+        clearConsole();
+        printSeparator(40);
+        printSeparator(30);
+        System.out.println("LEGENDS OF TEXTERRA");
+        System.out.println("TEXT BASED RPG BY GIULIANO");
+        printSeparator(30);
+        printSeparator(40);
+        pressToContinue();
+    }
+
 }

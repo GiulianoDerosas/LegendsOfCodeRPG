@@ -31,6 +31,18 @@ public class Player extends Character {
         GameLogic.clearConsole();
         GameLogic.printHeader("Choose a trait: ");
         System.out.println("(1) " + atkUpgrades[numAtkUpgrades]);
-        System.out.println("(2)");
+        System.out.println("(2) " + defUpgrades[numDefUpgrades]);
+//        Gets the players choice of trait
+        int input = GameLogic.readInt("-->", 2);
+        GameLogic.clearConsole();
+
+        if(input == 1){
+            GameLogic.printHeader("You chose " + atkUpgrades[numAtkUpgrades] + "!");
+            numAtkUpgrades++;
+        } else{
+            GameLogic.printHeader("You chose " + defUpgrades[numDefUpgrades] + "!");
+            numDefUpgrades++;
+        }
+        GameLogic.pressToContinue();
     }
 }
