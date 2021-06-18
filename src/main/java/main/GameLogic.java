@@ -163,6 +163,7 @@ public class GameLogic {
         if(player.numDefUpgrades > 0){
             System.out.println("Defensive traits: " + player.defUpgrades[player.numDefUpgrades - 1]);
         }
+        pressToContinue();
     }
     //    ______________________________________________________________________________
 

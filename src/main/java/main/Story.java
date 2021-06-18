@@ -8,8 +8,12 @@ public class Story {
         System.out.println("STORY");
         GameLogic.printSeparator(30);
         System.out.println("You are the last person standing after your coding bootcamp got obliterated by the QUANTUM CODER.");
-        System.out.println("Every single one of your classmates, instructors and hard drives got banished to the quantum realm. You are standing amongst the spliced code fragments of a once perfect program.");
-        System.out.println("All you seek now, is revenge. You begin planning your journey to defeat the QUANTUM CODER and rescue the hard drives! You can then use the data to re-digitise your friends!");
+        System.out.println("\n");
+        System.out.println("Every single one of your classmates, instructors and hard drives got banished to the quantum realm.");
+        System.out.println("You are standing amongst the spliced code fragments of a once perfect program.");
+        System.out.println("\n");
+        System.out.println("All you seek now, is revenge. You begin planning your journey to defeat the QUANTUM CODER and rescue the hard drives!");
+        System.out.println("You can then use the data to re-digitise your friends!");
         GameLogic.pressToContinue();
     }
 
@@ -20,7 +24,7 @@ public class Story {
         GameLogic.printSeparator(30);
         System.out.println("As you begin your journey you start travelling through the nearby server room to reach the main server switch.");
         System.out.println("The server room is now a very dangerous place. Cabling systems lay ripped apart and the airflow system has been de-activated.");
-        System.out.println("\nAfter clambering through the room, you finally reach the server switch.");
+        System.out.println("\nAfter clambering through the room, you finally reach the server power switch.");
         System.out.println("You use all your might to flip the switch and restore power, the journey to defeat the QUANTUM CODER begins.");
         System.out.println("\nYou turn around, but the QUANTUM CODERs powers have turned the broken cabling into Electric Death Snakes, interesting.");
         GameLogic.pressToContinue();
