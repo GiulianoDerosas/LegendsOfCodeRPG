@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class GameLogic {
 
     static Scanner scanner = new Scanner(System.in);
+    static Player player;
+    public static boolean isRunning;
 
 //    Method that gets user input from console
     public static int readInt(String prompt, int userChoices){
@@ -73,7 +75,30 @@ public class GameLogic {
             if (input == 1)
                 nameSet = true;
         }while(!nameSet);
+
+//        Create a new player object with inputted name
+        player = new Player(name);
+
+//        set isRunning to equal true so the game loop can begin
+        isRunning = true;
+
+//        Start main game lopp
+        gameLoop();
+        }
+
+//        Main game loop
+    public static void gameLoop(){
+        while(isRunning){
+            printMenu();
+            int input = readInt("--> ", 3);
+            if (input == 1)
+                continueJourney();
+            else if (input == 2)
+                characterInfo();
+            else
+                isRunning = false;
         }
     }
 
-}
+//
+    }
