@@ -8,6 +8,13 @@ public class GameLogic {
     static Player player;
     public static boolean isRunning;
 
+//    Random encounter
+    public static String[] encounters = {"Battle", "Battle", "Battle", "Rest", "Rest"};
+
+//    Enemy names
+    public static String[] enemies = {"Electric Death Snake", "Solid State Depreciator", "Electric Death Snake", "Rebel Router", "Saboteur Server"};
+
+//    Story elements
     public static int place = 0, act = 1;
     public static String[] places = {"The Server Room", "The Blockchain", "The Starbucks of Hate", "The Throne Room"};
 
@@ -140,17 +147,43 @@ public class GameLogic {
             player.chooseTrait();
 //            Prints the next part of the story
             Story.printSecondActIntro();
+//            Assign new values to the battles
+            enemies[0] = "Terror Token";
+            enemies[1] = "Consensus Criminal";
+            enemies[2] = "Adversary Altcoin";
+            enemies[3] = "Terror Token";
+            enemies[4] = "Guerrilla Genesis Block";
+//            Assign new values to the encounters
+            encounters[0] = "Battle";
+            encounters[1] = "Battle";
+            encounters[2] = "Battle";
+            encounters[3] = "Rest";
+            encounters[4] = "Shop";
         }
         else if (player.xp >= 50 && act == 2){
             act = 3;
             place = 2;
 
 //            Prints next part of the story
-            Story.printFirstActOutro();
+            Story.printSecondActOutro();
 //            Let's the player add a new trait (Level up)
             player.chooseTrait();
 //            Prints the next part of the story
             Story.printThirdActIntro();
+//            Assign new values to the battles
+            enemies[0] = "Hipster Henchman";
+            enemies[1] = "Giga-Hipster Henchman";
+            enemies[2] = "Macchiato Monster";
+            enemies[3] = "Disfigured Mermaid";
+            enemies[4] = "Sergeant Steam-Wand";
+//            Assign new values to the encounters
+            encounters[0] = "Battle";
+            encounters[1] = "Battle";
+            encounters[2] = "Battle";
+            encounters[3] = "Battle";
+            encounters[4] = "Shop";
+//            Fully heal the player
+            player.hp = player.maxHp;
         }
         else if (player.xp >= 100 && act == 3){
             act = 4;
@@ -162,6 +195,10 @@ public class GameLogic {
             player.chooseTrait();
 //            Prints the next part of the story
             Story.printFourthActIntro();
+//            Fully heal the player
+            player.hp = player.maxHp;
+//            Calling the final battle vs QUANTUM CODER
+//            finalBattle();
         }
     }
     //    ______________________________________________________________________________
