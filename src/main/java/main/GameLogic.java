@@ -8,7 +8,7 @@ public class GameLogic {
     static Player player;
     public static boolean isRunning;
 
-    public static int place = 0, act;
+    public static int place = 0, act = 1;
     public static String[] places = {"The Server Room", "The Blockchain", "The Starbucks of Hate", "The Throne Room"};
 
 
@@ -127,8 +127,52 @@ public class GameLogic {
     //    ______________________________________________________________________________
 
 
+    //        Method that checks the act
+    public static void checkAct(){
+//        Changes the act based on the players xp
+        if(player.xp >= 10 && act == 1){
+            act = 2;
+            place = 1;
+
+//            Prints next part of the story
+            Story.printFirstActOutro();
+//            Let's the player add a new trait (Level up)
+            player.chooseTrait();
+//            Prints the next part of the story
+            Story.printSecondActIntro();
+        }
+        else if (player.xp >= 50 && act == 2){
+            act = 3;
+            place = 2;
+
+//            Prints next part of the story
+            Story.printFirstActOutro();
+//            Let's the player add a new trait (Level up)
+            player.chooseTrait();
+//            Prints the next part of the story
+            Story.printThirdActIntro();
+        }
+        else if (player.xp >= 100 && act == 3){
+            act = 4;
+            place = 3;
+
+//            Prints next part of the story
+            Story.printThirdActOutro();
+//            Let's the player add a new trait (Level up)
+            player.chooseTrait();
+//            Prints the next part of the story
+            Story.printFourthActIntro();
+        }
+    }
+    //    ______________________________________________________________________________
+
+
 //        Method to continue the journey
     public static void continueJourney(){
+        checkAct();
+//        Checks that you're not in the final act
+        if(act != 4)
+            randomEncounter();
     }
     //    ______________________________________________________________________________
 
