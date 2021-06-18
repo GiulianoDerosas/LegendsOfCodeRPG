@@ -101,6 +101,15 @@ public class GameLogic {
         System.out.println("(3) Exit Game");
     }
 
+//    Prints the characters stats
+    public static void characterInfo(){
+        clearConsole();
+        printHeader("MENU");
+        System.out.println(player.name + "HP: " + player.hp + "/" + player.maxHp);
+        printSeparator(20);
+        System.out.println("XP: " + player.xp);
+    }
+
 
 //        Main game loop
     public static void gameLoop(){
