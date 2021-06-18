@@ -86,6 +86,22 @@ public class GameLogic {
         gameLoop();
         }
 
+//        Method to continue the journey
+    public static void continueJourney(){
+    }
+
+//    Print the main menu
+    public static void printMenu(){
+        clearConsole();
+        printHeader("MENU");
+        System.out.println("Choose an action:");
+        printSeparator(20);
+        System.out.println("(1) Continue on your journey");
+        System.out.println("(2) Character Stats");
+        System.out.println("(3) Exit Game");
+    }
+
+
 //        Main game loop
     public static void gameLoop(){
         while(isRunning){
