@@ -108,6 +108,14 @@ public class GameLogic {
         System.out.println(player.name + "HP: " + player.hp + "/" + player.maxHp);
         printSeparator(20);
         System.out.println("XP: " + player.xp);
+
+//        Prints characters traits
+        if(player.numAtkUpgrades > 0){
+            System.out.println("Offensive traits: " + player.atkUpgrades[player.numAtkUpgrades - 1]);
+            printSeparator(20);
+        }
+        if(player.numDefUpgrades > 0){
+            System.out.println("Defensive traits: " + player.defUpgrades[player.numDefUpgrades - 1]);
     }
 
 
