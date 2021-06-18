@@ -16,7 +16,7 @@ public class Story {
     public static void printFirstActIntro(){
         GameLogic.clearConsole();
         GameLogic.printSeparator(30);
-        System.out.println("ACT I - INTRO");
+        System.out.println("ACT I - INTRO - THE SERVER ROOM");
         GameLogic.printSeparator(30);
         System.out.println("As you begin your journey you start travelling through the nearby server room to reach the main server switch.");
         System.out.println("The server room is now a very dangerous place. Cabling systems lay ripped apart and the airflow system has been de-activated.");
@@ -29,7 +29,7 @@ public class Story {
     public static void printFirstActOutro(){
         GameLogic.clearConsole();
         GameLogic.printSeparator(30);
-        System.out.println("ACT I - OUTRO");
+        System.out.println("ACT I - OUTRO - THE SERVER ROOM");
         GameLogic.printSeparator(30);
         System.out.println("You did it! You crossed the server room and you're still alive!");
         System.out.println("As you step out the exit, you're elated as you can breathe freely. Just as you exhale, you are warped into a cosmic blockchain");
@@ -40,7 +40,7 @@ public class Story {
     public static void printSecondActIntro(){
         GameLogic.clearConsole();
         GameLogic.printSeparator(30);
-        System.out.println("ACT II - INTRO");
+        System.out.println("ACT II - INTRO - THE BLOCKCHAIN");
         GameLogic.printSeparator(30);
         System.out.println("You begin travelling across the compromised blocks of this once secure chain.");
         System.out.println("You collected some bitcoin from the evil you slain along the way.");
@@ -53,7 +53,7 @@ public class Story {
     public static void printSecondActOutro(){
         GameLogic.clearConsole();
         GameLogic.printSeparator(30);
-        System.out.println("ACT II - OUTRO");
+        System.out.println("ACT II - OUTRO - THE BLOCKCHAIN");
         GameLogic.printSeparator(30);
         System.out.println("You managed to cross the entire blockchain and you're still alive!");
         System.out.println("You are just a few dimensions away from your final destination; the Starbucks of Hate!");
@@ -65,7 +65,7 @@ public class Story {
     public static void printThirdActIntro(){
         GameLogic.clearConsole();
         GameLogic.printSeparator(30);
-        System.out.println("ACT III - INTRO");
+        System.out.println("ACT III - INTRO - THE STARBUCKS OF HATE");
         GameLogic.printSeparator(30);
         System.out.println("You see the Starbucks of Hate in front of you.");
         System.out.println("As you stand in front of the gates, you know there's no going back.");
@@ -79,7 +79,7 @@ public class Story {
     public static void printThirdActOutro(){
         GameLogic.clearConsole();
         GameLogic.printSeparator(30);
-        System.out.println("ACT III - OUTRO");
+        System.out.println("ACT III - OUTRO - THE STARBUCKS OF HATE");
         GameLogic.printSeparator(30);
         System.out.println("You have come so far. You defeated all of the QUANTUM CODERs controlled data.");
         System.out.println("As you stand in front of the door to his throne room, you gain a bout of confidence.");
@@ -91,7 +91,7 @@ public class Story {
     public static void printFourthActIntro(){
         GameLogic.clearConsole();
         GameLogic.printSeparator(30);
-        System.out.println("ACT IV - INTRO");
+        System.out.println("ACT IV - INTRO - THE THRONE ROOM");
         GameLogic.printSeparator(30);
         System.out.println("You enter the throne room of the QUANTUM CODER.");
         System.out.println("Sat upon his throne, he stares you dead in the eye. You feel the darkness around you.");

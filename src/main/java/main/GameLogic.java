@@ -8,6 +8,10 @@ public class GameLogic {
     static Player player;
     public static boolean isRunning;
 
+    public static int place = 0, act;
+    public static String[] places = {"The Server Room", "The Blockchain", "The Starbucks of Hate", "The Throne Room"};
+
+
 
 //    Method that gets user input from console
     public static int readInt(String prompt, int userChoices){
@@ -91,6 +95,13 @@ public class GameLogic {
     //    ______________________________________________________________________________
 
 
+//        Create the Story Intro
+        Story.printIntro();
+//        Create ACT1 intro
+        Story.printFirstActIntro();
+    //    ______________________________________________________________________________
+
+
 //        Create a new player object with inputted name
         player = new Player(name);
 //        set isRunning to equal true so the game loop can begin
@@ -125,7 +136,7 @@ public class GameLogic {
 //    Print the main menu
     public static void printMenu(){
         clearConsole();
-        printHeader("MENU");
+        printHeader(places[place]);
         System.out.println("Choose an action:");
         printSeparator(20);
         System.out.println("(1) Continue on your journey");
@@ -142,6 +153,7 @@ public class GameLogic {
         System.out.println(player.name + "HP: " + player.hp + "/" + player.maxHp);
         printSeparator(20);
         System.out.println("XP: " + player.xp);
+        printSeparator(20);
 
 //        Prints characters traits
         if(player.numAtkUpgrades > 0){
