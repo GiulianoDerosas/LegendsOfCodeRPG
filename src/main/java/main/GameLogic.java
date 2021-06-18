@@ -49,7 +49,7 @@ public class GameLogic {
 
 //    Method that will start the game
     public static void startGame(){
-        boolean nameSet;
+        boolean nameSet = false;
         String name;
         clearConsole();
         printSeparator(40);
@@ -59,6 +59,21 @@ public class GameLogic {
         printSeparator(30);
         printSeparator(40);
         pressToContinue();
+
+//        Get the players name
+        do {
+            clearConsole();
+            printHeader("What's your name?");
+            name = scanner.next();
+            clearConsole();
+            printHeader("Your name is " + name + ". Is that correct?");
+            System.out.println("(1) Yes!");
+            System.out.println("(2) No, I wanna change my name.");
+            int input = readInt("-->", 2);
+            if (input == 1)
+                nameSet = true;
+        }while(!nameSet);
+        }
     }
 
 }
