@@ -204,6 +204,23 @@ public class GameLogic {
     //    ______________________________________________________________________________
 
 
+//        Method to create a random encounter
+    public static void randomEncounter(){
+//        Creates a random number between 0 and the array length
+        int encounter = (int) (Math.random()* encounters.length);
+        if(encounters[encounter].equals("Battle")) {
+//            randomBattle();
+        }
+        else if(encounters[encounter].equals("Rest")){
+//            rest();
+        }
+        else{
+//            shop();
+        }
+    }
+    //    ______________________________________________________________________________
+
+
 //        Method to continue the journey
     public static void continueJourney(){
         checkAct();
