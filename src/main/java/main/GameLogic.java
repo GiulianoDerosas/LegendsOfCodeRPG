@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 public class GameLogic {
 
+
     static Scanner scanner = new Scanner(System.in);
     static Player player;
     public static boolean isRunning;
+
 
 //    Method that gets user input from console
     public static int readInt(String prompt, int userChoices){
@@ -22,12 +24,16 @@ public class GameLogic {
         } while(input < 1 || input > userChoices);
         return input;
     }
+    //    ______________________________________________________________________________
+
 
 //    Method that will faux clear the console
     public static void clearConsole(){
         for(int i = 0; i < 100; i++)
             System.out.println();
     }
+    //    ______________________________________________________________________________
+
 
 //    Method that will print a separator
     public static void printSeparator(int n){
@@ -35,6 +41,8 @@ public class GameLogic {
             System.out.print("-");
         System.out.println();
     }
+    //    ______________________________________________________________________________
+
 
 //    Method that will print a header
     public static void printHeader(String title){
@@ -42,12 +50,16 @@ public class GameLogic {
         System.out.println(title);
         printSeparator(30);
     }
+    //    ______________________________________________________________________________
+
 
 //    Method that waits for user input
     public static void pressToContinue(){
         System.out.println("Type anything to continue...");
         scanner.next();
     }
+    //    ______________________________________________________________________________
+
 
 //    Method that will start the game
     public static void startGame(){
@@ -62,6 +74,7 @@ public class GameLogic {
         printSeparator(40);
         pressToContinue();
 
+
 //        Get the players name
         do {
             clearConsole();
@@ -75,20 +88,39 @@ public class GameLogic {
             if (input == 1)
                 nameSet = true;
         }while(!nameSet);
+    //    ______________________________________________________________________________
+
 
 //        Create a new player object with inputted name
         player = new Player(name);
-
 //        set isRunning to equal true so the game loop can begin
         isRunning = true;
-
-//        Start main game lopp
+//        Start main game loop
         gameLoop();
+    }
+    //    ______________________________________________________________________________
+
+    //        Main game loop
+    public static void gameLoop(){
+        while(isRunning){
+            printMenu();
+            int input = readInt("--> ", 3);
+            if (input == 1)
+                continueJourney();
+            else if (input == 2)
+                characterInfo();
+            else
+                isRunning = false;
         }
+    }
+    //    ______________________________________________________________________________
+
 
 //        Method to continue the journey
     public static void continueJourney(){
     }
+    //    ______________________________________________________________________________
+
 
 //    Print the main menu
     public static void printMenu(){
@@ -100,6 +132,8 @@ public class GameLogic {
         System.out.println("(2) Character Stats");
         System.out.println("(3) Exit Game");
     }
+    //    ______________________________________________________________________________
+
 
 //    Prints the characters stats
     public static void characterInfo(){
@@ -116,22 +150,8 @@ public class GameLogic {
         }
         if(player.numDefUpgrades > 0){
             System.out.println("Defensive traits: " + player.defUpgrades[player.numDefUpgrades - 1]);
-    }
-
-
-//        Main game loop
-    public static void gameLoop(){
-        while(isRunning){
-            printMenu();
-            int input = readInt("--> ", 3);
-            if (input == 1)
-                continueJourney();
-            else if (input == 2)
-                characterInfo();
-            else
-                isRunning = false;
         }
     }
+    //    ______________________________________________________________________________
 
-//
-    }
+}
