@@ -379,6 +379,14 @@ public class GameLogic {
     }
     //    ______________________________________________________________________________
 
+
+    //  TODO  Add method so the player can rest
+    public static void rest(){
+
+    }
+    //    ______________________________________________________________________________
+
+
 //    Print the main menu
     public static void printMenu(){
         clearConsole();
