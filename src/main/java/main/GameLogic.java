@@ -209,7 +209,7 @@ public class GameLogic {
 //        Creates a random number between 0 and the array length
         int encounter = (int) (Math.random()* encounters.length);
         if(encounters[encounter].equals("Battle")) {
-//            randomBattle();
+            randomBattle();
         }
         else if(encounters[encounter].equals("Rest")){
 //            rest();
@@ -232,12 +232,12 @@ public class GameLogic {
 
 
     //        Method to create a random battle
-    public static void continueJourney(){
+    public static void randomBattle(){
         clearConsole();
         printHeader("You encountered an evil foe! Time to fight!");
         pressToContinue();
 //        Adds a new enemy with a random name
-        battle(new Enemy(enemies[(int) (Math.random()*enemies.length)]), player.xp);
+        battle(new Enemy(enemies[(int) (Math.random()*enemies.length)], player.xp));
     }
     //    ______________________________________________________________________________
 
