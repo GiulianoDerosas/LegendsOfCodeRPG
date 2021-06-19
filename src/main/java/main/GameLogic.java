@@ -335,6 +335,11 @@ public class GameLogic {
 //                Create a chance to escape, this is fixed at 30%
                     if(Math.random()*10 + 1 <= 3){
                         printHeader("You ran away from the " + enemy.name + "!");
+                        pressToContinue();
+                        break;
+                    }
+                    else{
+                        printHeader("You didn't manage to escape!");
 //                  Make player take flee damage
                         int dmgTaken = enemy.attack();
                         System.out.println("As you were fleeing you took " + dmgTaken + " damage.");
@@ -396,7 +401,7 @@ public class GameLogic {
         clearConsole();
         if (player.rests >= 1){
             printHeader("Would you like to take a break " + player.name + "? (" + player.rests + " rest(s) left).");
-            System.out.println("(1) Yes \n (2) Not right now.");
+            System.out.println("(1) Yes \n(2) Not right now.");
             int input = readInt("-->", 2);
             if (input == 1){
 //                Player actually rests
@@ -456,11 +461,12 @@ public class GameLogic {
 
 //        Prints characters traits
         if(player.numAtkUpgrades > 0){
-            System.out.println("Offensive traits: " + player.atkUpgrades[player.numAtkUpgrades - 1]);
+            System.out.println("Attack traits: " + player.atkUpgrades[player.numAtkUpgrades - 1]);
             printSeparator(20);
         }
         if(player.numDefUpgrades > 0){
-            System.out.println("Defensive traits: " + player.defUpgrades[player.numDefUpgrades - 1]);
+            System.out.println("Defense traits: " + player.defUpgrades[player.numDefUpgrades - 1]);
+            printSeparator(20);
         }
         pressToContinue();
     }

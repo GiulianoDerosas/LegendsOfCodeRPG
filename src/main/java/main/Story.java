@@ -8,13 +8,11 @@ public class Story {
         System.out.println("STORY");
         GameLogic.printSeparator(30);
         System.out.println("You are the last person standing after your coding bootcamp got obliterated by the QUANTUM CODER.");
-        System.out.println("\n");
-        System.out.println("Every single one of your classmates, instructors and hard drives got banished to the quantum realm.");
-        System.out.println("You are standing amongst the spliced code fragments of a once perfect program.");
-        System.out.println("\n");
-        System.out.println("All you seek now, is revenge. You begin planning your journey to defeat the QUANTUM CODER and rescue the hard drives!");
+        System.out.println("\nAll of your classmates, instructors and hard drives got banished to the quantum realm.");
+        System.out.println("You are stranded in the spliced code fragments of a once perfect program.");
+        System.out.println("\nAll you seek now, is revenge. You begin planning your journey to defeat the QUANTUM CODER and rescue the hard drives!");
         System.out.println("You can then use the data to re-digitise your friends!");
-        System.out.println("\n");
+
         GameLogic.pressToContinue();
     }
 
@@ -38,7 +36,7 @@ public class Story {
         System.out.println("ACT I - OUTRO - THE SERVER ROOM");
         GameLogic.printSeparator(30);
         System.out.println("You did it! You crossed the server room and you're still alive!");
-        System.out.println("As you step out the exit, you're elated as you can breathe freely. Just as you exhale, you are warped into a cosmic blockchain");
+        System.out.println("As you step out the exit, you're elated as you can breathe freely. Just as you exhale, you are warped into a cosmic blockchain.");
         System.out.println("\nYou feel a surge of energy and the experience you gained allows you to learn another trait!");
         System.out.println("\n");
         GameLogic.pressToContinue();
@@ -51,7 +49,7 @@ public class Story {
         GameLogic.printSeparator(30);
         System.out.println("You begin travelling across the compromised blocks of this once secure chain.");
         System.out.println("You collected some bitcoin from the evil you slain along the way.");
-        System.out.println("Luckily you know that every once in a while a hyper trader comes across this network.");
+        System.out.println("\nLuckily you know that every once in a while a hyper trader comes across this network.");
         System.out.println("You also know exactly where the QUANTUM CODER is, the surge of energy blessed you with a vision.");
         System.out.println("\nBut you have to cross this chaotic universe first...");
         System.out.println("\n");
