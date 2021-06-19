@@ -5,9 +5,11 @@ public class Player extends Character {
 //    Integers to define how many skills are in each path
     public int numAtkUpgrades, numDefUpgrades;
 
+//
+
 //    Arrays to store skills
-    public String[] atkUpgrades = {"Battle Fury", "Noxian Might", "Primal Surge", "Wolf's Frenzy"};
-    public String[] defUpgrades = {"Perseverance", "Bastion", "Courage", "Granite Shield"};
+    public String[] atkUpgrades = {"Offensive: 100WPM Typing Gloves", "Offensive: RGB Trainers", "Offensive: 1337 H4cK3r H4nD5", "Offensive: Gigabit Gauntlet"};
+    public String[] defUpgrades = {"Defensive: Firewall", "Defensive: VPN Shield", "Defensive: 2FAuthentication Helm", "Defensive: SHA256 Force Field"};
 
     public Player(String name) {
         super(name, 100, 0);
