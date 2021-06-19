@@ -299,17 +299,23 @@ public class GameLogic {
             else{
 //                Run away
                 clearConsole();
+//                Checks that the player isn't in the final boss battle, as you can't flee from it.
+                if (act != 4){
 //                Create a chance to escape, this is fixed at 30%
-                if(Math.random()*10 + 1 <= 3){
-                    printHeader("You ran away from the " + enemy.name + "!");
-//                    Make player take flee damage
-                    int dmgTaken = enemy.attack();
-                    System.out.println("As you were fleeing you took " + dmgTaken + " damage.");
-                    pressToContinue();
-//                This will check to see if player is alive or dead. If dead, end the game.
-                    if (player.hp <= 0){
-                        playerDied();
+                    if(Math.random()*10 + 1 <= 3){
+                        printHeader("You ran away from the " + enemy.name + "!");
+//                  Make player take flee damage
+                        int dmgTaken = enemy.attack();
+                        System.out.println("As you were fleeing you took " + dmgTaken + " damage.");
+                        pressToContinue();
+//                  This will check to see if player is alive or dead. If dead, end the game.
+                        if (player.hp <= 0)
+                            playerDied();
                     }
+                }
+                else{
+                    printHeader("YOU CANNOT ESCAPE THE WRATH OF THE QUANTUM CODER!");
+                    pressToContinue();
                 }
             }
         }
