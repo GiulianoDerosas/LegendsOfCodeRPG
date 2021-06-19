@@ -294,7 +294,23 @@ public class GameLogic {
                 }
             }
             else if(input == 2){
-
+//                USE A POTION
+            }
+            else{
+//                Run away
+                clearConsole();
+//                Create a chance to escape, this is fixed at 30%
+                if(Math.random()*10 + 1 <= 3){
+                    printHeader("You ran away from the " + enemy.name + "!");
+//                    Make player take flee damage
+                    int dmgTaken = enemy.attack();
+                    System.out.println("As you were fleeing you took " + dmgTaken + " damage.");
+                    pressToContinue();
+//                This will check to see if player is alive or dead. If dead, end the game.
+                    if (player.hp <= 0){
+                        playerDied();
+                    }
+                }
             }
         }
     }
