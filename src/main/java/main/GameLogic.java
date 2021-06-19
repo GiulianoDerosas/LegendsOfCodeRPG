@@ -79,7 +79,7 @@ public class GameLogic {
         clearConsole();
         printSeparator(40);
         printSeparator(30);
-        System.out.println("LEGENDS OF TEXTERRA");
+        System.out.println("LEGENDS OF CODE");
         System.out.println("TEXT BASED RPG BY GIULIANO");
         printSeparator(30);
         printSeparator(40);
