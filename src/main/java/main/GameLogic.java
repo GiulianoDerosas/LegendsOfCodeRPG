@@ -289,7 +289,6 @@ public class GameLogic {
 //                    Increase the players xp if the enemy has been defeated.
                     player.xp += enemy.xp;
                     System.out.println("You earned " + enemy.xp + " XP!");
-                    pressToContinue();
 //                    Adding the chance for a random drop at the end of battle
                     boolean addRest = (Math.random()*5 + 1 <= 2.25);
                     int bitcoinGained = (int) (Math.random()*enemy.xp);
@@ -302,6 +301,7 @@ public class GameLogic {
                     if (bitcoinGained > 0){
                         System.out.println("You collected " + bitcoinGained + " Bitcoin from the " + enemy.name);
                     }
+                    pressToContinue();
                     break;
                 }
             }
