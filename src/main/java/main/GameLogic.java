@@ -298,6 +298,7 @@ public class GameLogic {
                         player.rests ++;
                         System.out.println("You just earned an additional rest!");
                     }
+//                    Most enemies will drop but Math.random() has a chance to be zero
                     if (bitcoinGained > 0){
                         System.out.println("You collected " + bitcoinGained + " Bitcoin from the " + enemy.name);
                     }
@@ -352,6 +353,31 @@ public class GameLogic {
     }
     //    ______________________________________________________________________________
 
+
+    //    Add method so the player can shop
+    public static void shop(){
+        clearConsole();
+        printHeader("You meet a hyper trader. \nHe shows you some of his wares:");
+        int price = (int) Math.random()* (10 + player.pots*3) + 10 + player.pots;
+        System.out.println("- Healing Potion: " + price + " bitcoin.");
+        printSeparator(20);
+//        Offer the purchase
+        System.out.println("Would you like to buy a potion? \n(1) Yes! \n (2) No thanks.");
+        int input = readInt("-->", 2);
+        if (input == 1){
+            clearConsole();
+            if (player.bitcoin >= price) {
+                printHeader("You have bought a healing potion for " + price + " bitcoin.");
+                player.pots ++;
+                player.bitcoin -= price;
+            }
+            else {
+                printHeader("You don't have enough crypto to buy this!");
+                pressToContinue();
+            }
+        }
+    }
+    //    ______________________________________________________________________________
 
 //    Print the main menu
     public static void printMenu(){
