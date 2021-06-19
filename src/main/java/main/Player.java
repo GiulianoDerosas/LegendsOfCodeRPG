@@ -19,13 +19,17 @@ public class Player extends Character {
 //    Player specific methods
     @Override
     public int attack() {
-        return 0;
+//        If xp = 10, attack will return the value 8.5*(0.0-1.0) + 4 with one upgraded offensive trait.
+//        If xp = 50, attack will return the value 24.5*(0.0-1.0) + 12 with three upgraded offensive trait.
+        return (int) (Math.random()*(xp/4 + numAtkUpgrades*3 + 3) + xp/10 + numAtkUpgrades*2 + numDefUpgrades + 1);
     }
 
     @Override
     public int defend() {
-        return 0;
+        return (int) (Math.random()*(xp/4 + numDefUpgrades*3 + 3) + xp/10 + numDefUpgrades*2 +numAtkUpgrades + 1);
     }
+    //    ______________________________________________________________________________
+
 
     public void chooseTrait(){
         GameLogic.clearConsole();
@@ -45,4 +49,5 @@ public class Player extends Character {
         }
         GameLogic.pressToContinue();
     }
+    //    ______________________________________________________________________________
 }
