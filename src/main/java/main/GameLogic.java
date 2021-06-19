@@ -198,7 +198,7 @@ public class GameLogic {
 //            Fully heal the player
             player.hp = player.maxHp;
 //            Calling the final battle vs QUANTUM CODER
-//            finalBattle();
+            finalBattle();
         }
     }
     //    ______________________________________________________________________________
@@ -212,10 +212,10 @@ public class GameLogic {
             randomBattle();
         }
         else if(encounters[encounter].equals("Rest")){
-//            rest();
+            rest();
         }
         else{
-//            shop();
+            shop();
         }
     }
     //    ______________________________________________________________________________
@@ -354,6 +354,17 @@ public class GameLogic {
     //    ______________________________________________________________________________
 
 
+    //    Final battle
+    public static void finalBattle(){
+        battle(new Enemy("QUANTUM CODER", 300));
+//        Prints the final part of the story
+        Story.printEnd(player);
+//        Ends the game loop
+        isRunning = false;
+    }
+    //    ______________________________________________________________________________
+
+
     //    Add method so the player can shop
     public static void shop(){
         clearConsole();
@@ -380,9 +391,30 @@ public class GameLogic {
     //    ______________________________________________________________________________
 
 
-    //  TODO  Add method so the player can rest
+//      Add method so the player can rest
     public static void rest(){
-
+        clearConsole();
+        if (player.rests >= 1){
+            printHeader("Would you like to take a break " + player.name + "? (" + player.rests + " rest(s) left).");
+            System.out.println("(1) Yes \n (2) Not right now.");
+            int input = readInt("-->", 2);
+            if (input == 1){
+//                Player actually rests
+                clearConsole();
+                if (player.hp < player.maxHp){
+                    int hpRestored = (int) (Math.random() * (player.xp/4 + 1) + 10);
+                    player.hp += hpRestored;
+                    if (player.hp > player.maxHp)
+                        player.hp = player.maxHp;
+                    System.out.println("You had a rest and restored " + hpRestored + " health.");
+                    System.out.println("You're now at " + player.hp + "/" + player.maxHp + " health");
+                    player.rests --;
+                }else
+//                    Players health is already full
+                    System.out.println("You're at full health, no need to rest now!");
+                pressToContinue();
+            }
+        }
     }
     //    ______________________________________________________________________________
 
