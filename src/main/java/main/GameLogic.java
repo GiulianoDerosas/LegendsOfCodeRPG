@@ -231,6 +231,76 @@ public class GameLogic {
     //    ______________________________________________________________________________
 
 
+    //        Method to create a random battle
+    public static void continueJourney(){
+        clearConsole();
+        printHeader("You encountered an evil foe! Time to fight!");
+        pressToContinue();
+//        Adds a new enemy with a random name
+        battle(new Enemy(enemies[(int) (Math.random()*enemies.length)]), player.xp);
+    }
+    //    ______________________________________________________________________________
+
+
+    //        Battle method
+    public static void battle(Enemy enemy){
+        while(true){
+            clearConsole();
+            printHeader(enemy.name + "\nHP: " + enemy.hp + "/" + enemy.maxHp);
+            printHeader(player.name + "\nHP: " + player.hp + "/" + player.maxHp);
+
+//            Gives player a choice
+            System.out.println("Choose an action:");
+            printSeparator(20);
+            System.out.println("(1) Fight \n(2) Use Potion \n(3) Run Away");
+            int input = readInt("-->", 3);
+
+//            Various actions based on user input
+            if(input == 1){
+//                Fight
+                int dmg = player.attack() - enemy.defend();
+                int dmgTaken = enemy.attack() - player.defend();
+//                Check that damage taken isn't negative and add damage in case of huge defense
+                if(dmgTaken < 0){
+                    dmg -= dmgTaken / 2;
+                    dmgTaken = 0;
+                }
+                if(dmg < 0)
+                    dmg = 0;
+                player.hp -= dmgTaken;
+                enemy.hp -= dmg;
+
+//            Show what happened during the battle
+                clearConsole();
+                printHeader("BATTLE");
+                System.out.println("You dealt " + dmg + " damage to the " + enemy.name + ".");
+                printSeparator(15);
+                System.out.println("The " + enemy.name + " dealt " + dmgTaken + " damage to you.");
+                pressToContinue();
+
+//                This will check to see if player is alive or dead. If dead, end the game.
+                if(player.hp <= 0){
+                    playerDied();
+                    break;
+                }else if(enemy.hp <=0){
+//                    This will check to see if the enemy is alive or dead, if dead say player won.
+                    clearConsole();
+                    printHeader("You have defetead the " + enemy.name + "!");
+//                    Increase the players xp if the enemy has been defeated.
+                    player.xp += enemy.xp;
+                    System.out.println("You earned " + enemy.xp + " XP!");
+                    pressToContinue();
+                    break;
+                }
+            }
+            else if(input == 2){
+
+            }
+        }
+    }
+    //    ______________________________________________________________________________
+
+
 //    Print the main menu
     public static void printMenu(){
         clearConsole();
