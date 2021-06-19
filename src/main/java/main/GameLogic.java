@@ -294,7 +294,26 @@ public class GameLogic {
                 }
             }
             else if(input == 2){
-//                USE A POTION
+//                Use a healing potion
+                clearConsole();
+//                Check to see if the player has any potions
+                if(player.pots > 0 && player.hp < player.maxHp){
+                    printHeader("Would you like to drink a potion? (" + player.pots + " left).");
+                    System.out.println("(1) Yes! \n(2) No thanks.");
+                    input = readInt("-->", 2);
+//                    If the player choose yes restore their health to full
+                    if (input == 1){
+                        player.hp = player.maxHp;
+                        clearConsole();
+                        printHeader("You drank a healing potion and restored your health to " + player.maxHp + "!");
+                        pressToContinue();
+                    }
+//                    Can't drink a potion due to one of the conditions above not being met
+                    else {
+                        printHeader("You can't right now, you either have full HP or no potions!");
+                        pressToContinue();
+                    }
+                }
             }
             else{
 //                Run away
