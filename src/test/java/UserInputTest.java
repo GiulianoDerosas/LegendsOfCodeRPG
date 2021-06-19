@@ -10,5 +10,8 @@ public class UserInputTest {
         int input = GameLogic.readInt("Enter 1, 2 or 3: ", 3);
         System.out.println("You chose number " + input);
 
+//        Testing drop rate calculation
+        System.out.println((Math.random()*5 + 1<= 2.25));
+
     }
 }

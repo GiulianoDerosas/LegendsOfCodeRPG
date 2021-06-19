@@ -290,6 +290,17 @@ public class GameLogic {
                     player.xp += enemy.xp;
                     System.out.println("You earned " + enemy.xp + " XP!");
                     pressToContinue();
+//                    Adding the chance for a random drop at the end of battle
+                    boolean addRest = (Math.random()*5 + 1 <= 2.25);
+                    int bitcoinGained = (int) (Math.random()*enemy.xp);
+//                    if the boolean addRest is true add a rest to the player
+                    if (addRest){
+                        player.rests ++;
+                        System.out.println("You just earned an additional rest!");
+                    }
+                    if (bitcoinGained > 0){
+                        System.out.println("You collected " + bitcoinGained + " Bitcoin from the " + enemy.name);
+                    }
                     break;
                 }
             }
