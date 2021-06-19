@@ -300,6 +300,7 @@ public class GameLogic {
 //                    Most enemies will drop but Math.random() has a chance to be zero
                     if (bitcoinGained > 0){
                         System.out.println("You collected " + bitcoinGained + " Bitcoin from the " + enemy.name);
+                        player.bitcoin += bitcoinGained;
                     }
                     pressToContinue();
                     break;
@@ -311,7 +312,7 @@ public class GameLogic {
 //                Check to see if the player has any potions
                 if(player.pots > 0 && player.hp < player.maxHp){
                     printHeader("Would you like to drink a potion? (" + player.pots + " left).");
-                    System.out.println("(1) Yes! \n(2) No thanks.");
+                    System.out.println("(1) Yes!\n(2) No thanks.");
                     input = readInt("-->", 2);
 //                    If the player choose yes restore their health to full
                     if (input == 1){
@@ -320,11 +321,11 @@ public class GameLogic {
                         printHeader("You drank a healing potion and restored your health to " + player.maxHp + "!");
                         pressToContinue();
                     }
+                }
+                else {
 //                    Can't drink a potion due to one of the conditions above not being met
-                    else {
-                        printHeader("You can't right now, you either have full HP or no potions!");
-                        pressToContinue();
-                    }
+                    printHeader("You can't right now, you either have full HP or no potions!");
+                    pressToContinue();
                 }
             }
             else{

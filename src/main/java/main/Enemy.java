@@ -13,9 +13,10 @@ public class Enemy extends Character{
 
 //    Enemy specific methods
 //    Changed 4 to 2 in playerXP division as the enemies were doing consistently low damage.
+//    Changed 4 to 3 in XP division as the enemies were doing consistently low damage.
     @Override
     public int attack() {
-        return (int) (Math.random()*(playerXp/2 + 1) + xp/4 + 3);
+        return (int) (Math.random()*(playerXp/2 + 1) + xp/3 + 3);
     }
 
     @Override
