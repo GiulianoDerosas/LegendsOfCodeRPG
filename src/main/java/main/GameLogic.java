@@ -353,7 +353,9 @@ public class GameLogic {
         printHeader("MENU");
         System.out.println(player.name + "HP: " + player.hp + "/" + player.maxHp);
         printSeparator(20);
-        System.out.println("XP: " + player.xp);
+        System.out.println("XP: " + player.xp + "\tBitcoin: " + player.bitcoin);
+        printSeparator(20);
+        System.out.println("Number of potions: " + player.pots);
         printSeparator(20);
 
 //        Prints characters traits
