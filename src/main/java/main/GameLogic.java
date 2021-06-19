@@ -336,6 +336,17 @@ public class GameLogic {
     //    ______________________________________________________________________________
 
 
+    //    Method that will end the game if the player dies
+    public static void playerDied(){
+        clearConsole();
+        printHeader("You have been defeated!");
+        printHeader("You earned " + player.xp + " XP on your quest for the hard drives." );
+        System.out.println("Thanks for playing, try again and bring down the QUANTUM CODER!");
+        isRunning = false;
+    }
+    //    ______________________________________________________________________________
+
+
 //    Prints the characters stats
     public static void characterInfo(){
         clearConsole();
