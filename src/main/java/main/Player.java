@@ -5,7 +5,8 @@ public class Player extends Character {
 //    Integers to define how many skills are in each path
     public int numAtkUpgrades, numDefUpgrades;
 
-//
+//    Adding bitcoin, rests & healing potions to the player
+    int bitcoin, rests, pots;
 
 //    Arrays to store skills
     public String[] atkUpgrades = {"Offensive: 100WPM Typing Gloves", "Offensive: RGB Trainers", "Offensive: 1337 H4cK3r H4nD5", "Offensive: Gigabit Gauntlet"};
@@ -15,6 +16,9 @@ public class Player extends Character {
         super(name, 100, 0);
         this.numAtkUpgrades = 0;
         this.numDefUpgrades = 0;
+        this.bitcoin = 5;
+        this.rests = 1;
+        this.pots = 0;
         chooseTrait();
     }
 
