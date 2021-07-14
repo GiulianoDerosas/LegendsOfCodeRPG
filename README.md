@@ -44,9 +44,9 @@ A text-based RPG game where the player makes certain choices on the path to defe
 
   <img src="https://i.ibb.co/wdDk4ZJ/Screenshot-2021-07-14-at-1-29-37-PM.png"><p>Welcome Screen</p></img>
   
-  <img src=" https://i.ibb.co/86Vn7f5/Screenshot-2021-07-14-at-1-30-38-PM.png"><p>Player Stats</p></img>
+  <img src="https://i.ibb.co/86Vn7f5/Screenshot-2021-07-14-at-1-30-38-PM.png"><p>Player Stats</p></img>
   
-  <img src=" https://i.ibb.co/V9zJCT3/Screenshot-2021-07-14-at-1-30-05-PM.png"><p>Story Screen</p></img>
+  <img src="https://i.ibb.co/V9zJCT3/Screenshot-2021-07-14-at-1-30-05-PM.png"><p>Story Screen</p></img>
   
   <img src="https://i.ibb.co/qnLjzD2/Screenshot-2021-07-14-at-1-30-55-PM.png"><p>Battle Screen</p></img>
 
