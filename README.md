@@ -1,4 +1,4 @@
-<h1 align="center"> TIPL 🍸</h1>
+<h1 align="center"> Legends Of Code RPG 💻🎮</h1>
 <h3 align="center"> A solo project built using Java.</h3>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
